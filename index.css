@@ -1,0 +1,139 @@
+/* Normalize CSS */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Variables & Typography*/
+:root {
+  --nav-height: 8rem;
+  font-family: 'Anton', sans-serif;
+}
+
+/* Ensure we occupoy the whole screen */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* Do rest of styling below */
+
+/* Container for application */
+.Page {
+  position: relative;
+}
+
+/* Top navigation */
+.header {
+  /* Content placement */
+  display: flex;
+  justify-content: space-between;
+
+  /* Own styling */
+  padding: 0.5rem 1rem;
+  background-color: rgb(95, 0, 158);
+  color: wheat;
+
+  /* fixing nav to top */
+  position: fixed;
+  top: 0px;
+
+  /* Setting size */
+  height: var(--nav-height);
+  width: 100%;
+}
+
+/* Navbar content styling */
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  min-width: 10rem;
+}
+
+.navigation>ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+/* Main content */
+.main {
+  /* Content placement */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Take up extra space */
+  flex-grow: 10;
+  min-height: 100vh;
+  margin-top: var(--nav-height);
+  /* navigation is fixed, do not overlap */
+}
+
+/* Main content styling */
+.title {
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 1rem 0rem;
+}
+
+/* Post styling */
+.post {
+  margin-top: .5rem;
+  max-width: 30rem;
+
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(191, 183, 242);
+
+  font-size: large;
+
+  /* Use shadows for some illusion of depth */
+  box-shadow: 2px 2px 4px 4px rgba(0, 1, 73, 0.3);
+  box-shadow: inset 1px -2px 4px rgb(255, 255, 255);
+}
+
+.post>p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post>.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .2rem;
+}
+
+.post>.meta>* {
+  font-weight: 200;
+}
+
+/* Big Foot(er) */
+.footer {
+  min-height: 100vh;
+  padding: 2rem;
+
+  background-color: rgb(52, 3, 52);
+  color: white;
+  text-align: center;
+}
